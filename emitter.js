@@ -121,7 +121,7 @@ function getEmitter() {
          * @returns {Object}
          */
         through: function (event, context, handler, frequency) {
-            const listener = new EventListener(context, handler, frequency);
+            const listener = new EventListener(context, handler, undefined, frequency);
             addListener(event, listener);
 
             return this;
